@@ -27,8 +27,10 @@ Game.prototype.buildBoard = function() {
   var div = 1;
   for (var i = 0; i < playPictures.length; i++) {
       // $("#" + div).append(playPictures[i]);
-      $("#" + div).append("<img src='img/" + playPictures[i] + ".jpg'>");
+      $("#" + div).append("<img src='img/" + playPictures[i] + ".jpg' width='250px' class='tile-image'>");
+      // $("#" + div).append("<img src='img/back.jpg' width='250px' class='tile-back'>");
       div++;
+
   }
 
 
@@ -39,4 +41,9 @@ Game.prototype.buildBoard = function() {
 $(document).ready(function() {
   var game = new Game();
   game.buildBoard();
+  $(".tile-image").click(function() {
+    $(this).css('opacity', '1.0');
+  });
+
+
 });
