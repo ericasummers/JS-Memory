@@ -18,7 +18,6 @@ Game.prototype.buildBoard = function() {
       playPictures[currentIndex] = playPictures[randomIndex];
       playPictures[randomIndex] = temporaryValue;
     }
-    console.log(playPictures);
     return playPictures;
   }
 
@@ -26,24 +25,37 @@ Game.prototype.buildBoard = function() {
 
   var div = 1;
   for (var i = 0; i < playPictures.length; i++) {
-      // $("#" + div).append(playPictures[i]);
-      $("#" + div).append("<img src='img/" + playPictures[i] + ".jpg' width='250px' class='tile-image'>");
-      // $("#" + div).append("<img src='img/back.jpg' width='250px' class='tile-back'>");
+      $("#" + div).append("<img src='img/" + playPictures[i] + ".jpg' width='250px' class='tile-picture' id='img" + playPictures[i] + "'>");
       div++;
-
   }
-
-
-
 }
+
 
 
 $(document).ready(function() {
   var game = new Game();
+  var cards = 0;
+  var cardIds = [];
   game.buildBoard();
-  $(".tile-image").click(function() {
+  $("img").click(function() {
     $(this).css('opacity', '1.0');
+    cards++;
+    cardIds.push($(this).attr("id"));
   });
+  setInterval(function() {
+    if (cards % 2 === 0) {
+      if (cardIds[0] === cardIds[1]) {
+        $("#img" + cardIds[0]).hide();
+        cardIds = [];
+        cards = 0;
+      } else {
+        $(".tile-picture").css('opacity', '0.0');
+        cardIds = [];
+        cards = 0;
+      }
+    }
+  }, 2500);
+
 
 
 });
