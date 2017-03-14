@@ -45,7 +45,7 @@ $(document).ready(function() {
   setInterval(function() {
     if (cards % 2 === 0) {
       if (cardIds[0] === cardIds[1]) {
-        $("#img" + cardIds[0]).hide();
+        $("#cardIds[0]").remove();
         cardIds = [];
         cards = 0;
       } else {
