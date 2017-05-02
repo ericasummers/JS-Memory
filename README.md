@@ -1,3 +1,33 @@
+# _Javascript Memory Tiles Game_
+
+#### By _**Erica Wright & Maggie Harrington**_
+
+## Description
+
+_A web app that allows users to click on tiles to reveal and match images._
+
+## Setup/Installation Requirements
+
+* _Clone this repository and open index.html in your browser. If you would rather use the commandline then change directory into the top level of the cloned repository and then, for mac run the following command in your terminal: open index.html. For a PC run start index.html"._
+
+## Known Bugs
+
+_No known bugs at this time._
+
+## Support and contact details
+
+_If you run into any problems then let me know or feel free to contribute to the code._
+
+## Technologies Used
+
+_HTML_
+_JavaScipt_
+_jQuery_
+
+### License
+
+Copyright (c) 2017 **_Erica Wright & Maggie Harrington_**
+
 ##Javascript Project Setup
 
 * Create initial scripts pages and html, separate interface and business logic.
